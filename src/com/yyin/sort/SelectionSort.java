@@ -18,7 +18,7 @@ public class SelectionSort {
             int[]  arr2= new int[arr1.length];//这里一定要对数组进行复制
             System.arraycopy(arr1, 0, arr2, 0, arr1.length);//复制数组
             Arrays.sort(arr1);//用确定正确的方法计算一遍
-            SelectionSortM(arr2);//用自己的方法计算一遍
+            selectionSort(arr2);//用自己的方法计算一遍
             boolean same = true;
             for(int i=0;i<arr1.length;i++) {
                 //比较两种算法结果是否一致
@@ -29,7 +29,7 @@ public class SelectionSort {
             }
             System.out.print(same);
         }
-        static void SelectionSortM (int[] arr) {//自己写的排序算法
+        static void selectionSort (int[] arr) {//自己写的排序算法
 
             for(int i = 0;i<arr.length-1;i++) {
                 int min = i;
